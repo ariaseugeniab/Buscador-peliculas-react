@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import  {BtnBack} from '../components/BtnBack'
 
 export const NotFound = () => (
