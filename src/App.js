@@ -22,7 +22,6 @@ class App extends Component {
         <Route path='/detail/:id' component={Detail} />
         <Route component={NotFound} />
       </Switch>
-      {/* {Page} */}
     </div>
   );
   }

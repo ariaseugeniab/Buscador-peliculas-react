@@ -8,12 +8,17 @@ export class SearchForm extends Component {
         inputMovie: ''
     }
 
+    // _handleIput = (e) =>{
+    //   e.target.value = ''
+    // }
+
     _handleChange = (e) => {
         this.setState({inputMovie: e.target.value})
     }
 
     _handleSubmit = (e) =>{
         e.preventDefault()
+
         const { inputMovie } = this.state
         // console.log(`${URL}${API_KEY}&t=${inputMovie}`)
         
@@ -24,6 +29,7 @@ export class SearchForm extends Component {
             console.log({ Search, totalResults })
             this.props.onResults(Search)
         })
+        document.getElementById("input-buscador").value = ''
     }
 
   render() {
@@ -31,15 +37,20 @@ export class SearchForm extends Component {
       <form onSubmit={this._handleSubmit}>
         <div className="field has-addons">
           <div className="control">
+
             <input
-              className="input"
+            id="input-buscador"
+              className="input buscador"
               onChange={this._handleChange}
+              onClick={this._handleIput}
               type="text"
-              placeholder="Buscar una película"
+              // placeholder="Buscar una película"
+              // value="Click en el cuadro para comenzar"
             />
+           <label className="label-input">Buscar una película</label>
           </div>
           <div className="control">
-            <button className="button is-info">Buscar</button>
+            <button className="button" id="btn-buscar"><i className="fa fa-search" id="buscador-btn"></i></button>
           </div>
         </div>
       </form>

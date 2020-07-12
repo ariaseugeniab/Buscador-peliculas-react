@@ -5,6 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
+    background: url(./poster2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 800px ;
 }
 
 code {

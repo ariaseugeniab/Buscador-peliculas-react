@@ -19,16 +19,19 @@ export class Home extends Component {
   render() {
     return (
       <div>
-        <br />
-        <Title>Buscador de películas</Title>
+        <div className="portada">
+        <Title>BUSCADOR DE PELÍCULAS</Title>
         <div className="SearchForm-wrapper">
           <SearchForm onResults={this._handleResults} />
         </div>
+        </div>
+        <div className="div-results">
         {this.state.usedSearch ? (
           this._renderResults()
         ) : (
-          <small>Pulsa sobre el diálogo para buscar</small>
+          <p>Aquí se verán los resultados</p>
         )}
+        </div>
       </div>
     );
   }

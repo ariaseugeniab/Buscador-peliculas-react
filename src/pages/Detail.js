@@ -42,10 +42,11 @@ export class Detail extends Component {
   render() {
     const { Title, Poster, Actors, Metascore, Plot } = this.state.movie;
     return (
-      <div className="card img-detail">
-        <div className="card-image">
+      <div className="div-results">
+      <div className="card">
+        <div className="card-image is-centered">
           <figure className="image is-4by3">
-            <img src={Poster} alt={Title} />
+            <img id="imagen-pelicula" src={Poster} alt={Title} />
           </figure>
         </div>
         <div className="card-content">
@@ -61,8 +62,9 @@ export class Detail extends Component {
             <br />
             <p>{Actors}</p>
           </div>
-        </div>
-        <BtnBack />
+          <BtnBack />
+        </div></div>
+
       </div>
     );
   }
