@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import  {BtnBack} from '../components/BtnBack'
 
 const API_KEY = "b398117f";
-const URL = "http://www.omdbapi.com/?apikey=";
+const URL = "https://www.omdbapi.com/?apikey=";
 
 export class Detail extends Component {
     // static propTypes = {
