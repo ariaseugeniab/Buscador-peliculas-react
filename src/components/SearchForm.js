@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 const API_KEY = 'b398117f'
-const URL = 'http://www.omdbapi.com/?apikey='
+const URL = 'https://www.omdbapi.com/?apikey='
 
 export class SearchForm extends Component {
     state = {
