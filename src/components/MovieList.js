@@ -9,10 +9,10 @@ export class MoviesList extends Component {
     render(){
         const { movies } = this.props
         return (
-            <div className="Movies-list is-desktop">
+            <div className="card-deck">
                 { movies.map(movie =>{
           return(
-              <div key={movie.imdbID} className="Movie-list-item is-half-desktop">
+              <div key={movie.imdbID} className="Movie-list-item">
                     <Movie 
                 id={movie.imdbID}
                 title={movie.Title}

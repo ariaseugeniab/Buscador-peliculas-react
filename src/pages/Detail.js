@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 // import PropTypes from "prop-types";
-import  {BtnBack} from '../components/BtnBack'
+import  {BtnBack} from '../components/BtnBack' 
+import ImgNA from '../imgNa.jpg'
+
 
 const API_KEY = "b398117f";
 const URL = "https://www.omdbapi.com/?apikey=";
+// const imgNA = 'https://lh3.googleusercontent.com/proxy/9fEgqXZU8bb3rCNxroIMjzbyZenGBhV0Ek4WdEZEfhNVUB3wOmVgM79YK_lWEpT78gLSib4fdO5iheNfyJpASGyY_fu7WI_uMFUUAu-21i2eNM87GWFJu3-xuoicCUEvgUIU'
 
 export class Detail extends Component {
     // static propTypes = {
@@ -43,28 +46,22 @@ export class Detail extends Component {
     const { Title, Poster, Actors, Metascore, Plot } = this.state.movie;
     return (
       <div className="div-results">
-      <div className="card">
-        <div className="card-image is-centered">
-          <figure className="image is-4by3">
-            <img id="imagen-pelicula" src={Poster} alt={Title} />
-          </figure>
-        </div>
-        <div className="card-content">
-          <div className="media">
-            <div className="media-content">
-              <p className="title is-4">{Title}</p>
-              <p className="subtitle is-6">{Metascore}</p>
-            </div>
+      <div className="card mb-3">
+        <div className="row no-gutters">
+          <div className="col-md-4">
+            <img id="card-img"  src={Poster === 'N/A' ? ImgNA : Poster} alt={Title} />
           </div>
-
-          <div className="content">
-            {Plot}
-            <br />
-            <p>{Actors}</p>
+        <div className="col-md-8">
+          <div className="card-body">
+              <h4 className="card-title">{Title}</h4>
+    <p className="card-text"> <small>{Metascore === 'N/A' ? '' : `A ${Metascore}% les gustó esta película`} </small></p>
+              <p className="card-text">{Plot === 'N/A' ? '' : Plot}</p>
+            <p className="card-text"> 
+            <small className="text-muted">Actores: {Actors}</small></p>
           </div>
-          <BtnBack />
         </div></div>
-
+        </div>
+        <BtnBack />
       </div>
     );
   }

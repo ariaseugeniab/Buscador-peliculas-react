@@ -12,7 +12,7 @@ export class Home extends Component {
   
   _renderResults = () =>{
     return this.state.results.length === 0 
-      ? <p>Sin resultados</p> 
+      ? <p>Sin resultados encontrados.</p> 
       : <MoviesList movies={this.state.results}/>
   }
 
@@ -29,7 +29,7 @@ export class Home extends Component {
         {this.state.usedSearch ? (
           this._renderResults()
         ) : (
-          <p>Aquí se verán los resultados</p>
+          <p>Aquí se verán los resultados.</p>
         )}
         </div>
       </div>

@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   position: relative;
     background: url(./poster2.jpg);
-    background-repeat: no-repeat;
+    background-repeat: initial;
     background-size: cover;
     min-height: 800px ;
 }

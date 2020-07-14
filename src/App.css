@@ -2,40 +2,24 @@
 
 .App {
   text-align: center;
+  margin: 0;
 }
-
+/* 
 .App {
   
   position: relative;
-  /* background: url(./poster2.jpg); */
   background-repeat: no-repeat;
   background-size: cover;
- }
-
- /* .title-page {
-  position: absolute;
-  width: 1115px;
-  height: 134px;
-  left: 163px;
-  top: 100px;
-  
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 86.5319px;
-  line-height: 163.69%;
-  color: #FFFFFF;
  } */
 
  #titulo {
-   /* color: #ffffff; */
    font-family: 'Raleway', sans-serif;
    font-style: normal;
    font-weight: bolder;
    line-height: 163.69%;
   padding-top: 45px;
-  /* background-color: #ffffff; */
  }
+
  .portada {
   /* display: inline-block; */
     background-color: #ffffff;
@@ -66,10 +50,6 @@
    font-size: 15px;
    font-weight: bold;
  }
-
- /* .control input:focus ~ button{
-   color: #ffffff
- } */
 
 #btn-buscar {
   background-color: #89e163;
@@ -109,26 +89,59 @@
   white-space: nowrap;}
  */
 
-.SearchForm-wrapper {
+ .SearchForm-wrapper {
   display: flex;
   justify-content: center;
 }
 
 .div-results {
   padding: 20px;
+  /* padding-right: 20px; */
   width: 80%;
   position: relative;
   margin: auto;
   margin-top: 20px;
   background-color: #ffffff;
-  display: inline-block;
+  /* justify-content: center; */
 }
+
+.card-deck .card {
+  display: inline-block;
+  overflow: auto;
+  display: flex;
+  /* align-items: center; */
+}
+
+.card {
+  max-width: 300px;
+  /* margin: 25px 20px; */
+  text-align: left;
+}
+
+/* .Movie-list-item {
+  max-width: 300px;
+} */
 
 .div-results p {
   margin: auto;
-  font-size: 20px;
-  /* margin-bottom: 50px; */
+  /* font-size: 20px; */
 }
+
+.card-deck .card:hover {
+  text-decoration: none;
+  background-color: #a5a5a5;
+}
+
+.card h4 {
+  font-size: 150% ;
+}
+
+.card {
+  line-height: 2;
+}
+ /* A PARTIR DE ACA VAMOS A HACERLO CON BOOTSTRAP`` */
+
+/*
 
 .Movies-list{
   display: flex;
@@ -159,7 +172,6 @@ box-shadow: 5px 5px 8px -1px rgba(243,243,243,1);
 
 .Movie-list-item:hover {
   background-color: #a5a5a5;
-  /* border: solid #a5a5a5; */
 }
 
 #imagen-pelicula {
@@ -168,11 +180,10 @@ box-shadow: 5px 5px 8px -1px rgba(243,243,243,1);
 }
 
 .img-detail{
-  /* display: flex; */
   justify-content: center;
   width: 50%;
 }
 
 .img-detail img {
   width: 50%;
-}
+} */
